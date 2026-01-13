@@ -9,7 +9,9 @@ import MockInterviewTab from "./MockInterviewTab";
 import StudyPlanTab from "./StudyPlanTab";
 import memoriLogo from "../../assets/Memori_Logo.png";
 
-const API_BASE = "https://technical-interview-prep-agent-production.up.railway.app/docs";
+// Allow overriding the API base via Vite env, fallback to deployed host.
+const API_BASE = import.meta.env.VITE_API_BASE?.trim() ||
+  "https://technical-interview-prep-agent-production.up.railway.app";
 
 type TabKey = "profile" | "practice" | "progress" | "history" | "analytics" | "mock" | "study";
 
