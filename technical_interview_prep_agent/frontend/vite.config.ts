@@ -5,5 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173
+  },
+  preview: {
+    allowedHosts: ["memorisaas-production-922c.up.railway.app"]
   }
 });
